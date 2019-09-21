@@ -1,5 +1,6 @@
 import discord
-import env.token 
+
+token = 'NjI1MDMzOTA2MTE4NDU5NDA5.XYZw6Q.9YpxbEmItE0ivzbOok8z3ngOK4Y'
 
 client = discord.Client()
 
@@ -15,12 +16,11 @@ async def on_message(message):
     if message.content.startswith('!hello'):
         await message.channel.send('Hello!')
 
-    elif message.content.startswith('!members'):
-        x = message.guild.members
-        m = ''
-        for member in x:
-            m = m + '\n' +member.name 
-        await message.channel.send('```'+m+'```')
-        
+    elif message.content.startswith('fuck you'):
+        await message.channel.send('Hey, that isn\'t nice!')
+
+    elif message.content.startswith('bitch'):
+        await message.channel.send('Hey, that isn\'t nice!')
+
 
 client.run(token)
